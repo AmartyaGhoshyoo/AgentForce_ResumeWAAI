@@ -13,7 +13,7 @@ params = {
 	"include_errors": "true",
 }
 data = [
-	{"url":"https://www.linkedin.com/in/svonava/"},
+	{"url":"https://www.linkedin.com/in/amartya-ghosh-2b9b7b22b/"},
 ]
 
 response = requests.post(url, headers=headers, params=params, json=data)
