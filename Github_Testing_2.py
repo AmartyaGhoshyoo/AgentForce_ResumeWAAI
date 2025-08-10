@@ -41,6 +41,6 @@ class GithubProfileFetcher(BaseTool):
 
 if __name__ == "__main__":
     tool = GithubProfileFetcher()
-    result = tool.run("https://github.com/AmartyaGhoshyoo")  # Example user
+    result = tool.run("https://github.com/AzadTom")  # Example user
     console=Console()
     print(result)
