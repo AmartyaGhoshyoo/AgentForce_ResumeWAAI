@@ -86,7 +86,7 @@ class LinkedInFetcherTool(BaseTool):
         snapshot_url = f"https://api.brightdata.com/datasets/v3/snapshot/{response['snapshot_id']}"
         print(response['snapshot_id'])
         time.sleep(30)
-        max_attempts = 60  # Maximum 2 minutes (60 * 2 seconds)
+        max_attempts = 60  
         attempt = 0
         
         print(f"⏳ Waiting for LinkedIn data collection to complete...")
@@ -116,7 +116,6 @@ class LinkedInFetcherTool(BaseTool):
                         "details": status_data.get('error', 'Unknown error')
                     }
                 
-                # Wait 2 seconds before next poll
                 time.sleep(30)
                 attempt += 1
                 

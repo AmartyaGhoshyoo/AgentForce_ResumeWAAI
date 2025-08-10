@@ -1,22 +1,25 @@
 import re
 
 text = """
-### 3. RESUME OPTIMIZATION GUIDE
-- **Keyword Integration Recommendations:** Incorporate specific keywords such as "Generative AI," "Machine Learning," "Data Analysis," "Python," "Neural Networks," and "Deep Learning."
-  
-- **Layout and Formatting Improvements:** 
-  - Use clean, professional layouts; consider singular font types and sizes consistently throughout.
-  - Ensure sections like "Education" and "Projects" are prominent to catch attention easily.
-  
-- **Content Restructuring Suggestions:** Arrange content in reverse chronological order, with strong highlights on recent relevant projects.
-  
-- **ATS Optimization Tips:** Use common job titles and required qualifications exactly as they appear in job descriptions to increase ATS compatibility.
+## 3. RESUME OPTIMIZATION GUIDE 
+- **Keyword Integration Recommendations:**  
+  - Incorporate keywords such as "deep learning," "data analysis," "supervised learning," and "neural networks" to enhance ATS visibility.  
+- **Layout and Formatting Improvements:**  
+  - Utilize standard headings (e.g., Experience, Education, Skills) for better ATS compatibility.  
+  - Ensure consistent font size and type throughout the document.  
+- **Content Restructuring Suggestions:**  
+  - Prioritize listing internships before education to highlight relevant experience.  
+- **ATS Optimization Tips:**  
+  - Use bullet points for job responsibilities and achievements.  
+  - Avoid images or unusual formatting that ATS could misinterpret.  
 
-### 4. CUSTOMIZED COVER LETTER TEMPLATE
+---
+
+## 4. CUSTOMIZED COVER LETTER TEMPLATE ##  
 """
 
 # Allow a space after ##
-pattern = r'(#+\s*3\..*?\n)(.*?)(\n#+\s*4\..*)'
+pattern = r'(.*\s*3\..*?\n)(.*?)(\n.*\s*4\..*)'
 match = re.search(pattern, text, re.S)
 
 if match:

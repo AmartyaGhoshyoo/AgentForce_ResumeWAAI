@@ -241,8 +241,8 @@ if st.sidebar.button("🚀 Run Career Analysis", type="primary"):
         with tab2:
             st.markdown("### 🎯 Skills Gap Analysis")
             st.info("🔍 **Skills analysis based on your target requirements**")
-            pattern = r'(#+\s*3\..*?\n)(.*?)(\n#+\s*4\..*)'
-            print(result.raw)
+            pattern = r'(.*\s*3\..*?\n)(.*?)(\n.*\s*4\..*)'
+        
             match = re.search(pattern, result.raw, re.S)
             
 
@@ -257,8 +257,8 @@ if st.sidebar.button("🚀 Run Career Analysis", type="primary"):
         with tab3:
             st.markdown("### 📈 Experience Evaluation")
             st.info("💼 **Professional experience assessment**")
-            pattern = r'(#+\s*2\..*?\n)(.*?)(\n#+\s*3\..*)'
-            print(result.raw)
+            pattern = r'(.*\s*2\..*?\n)(.*?)(\n.*\s*3\..*)'
+    
             match = re.search(pattern, result.raw, re.S)
             if match:
                 print("this is tab3")
@@ -270,7 +270,7 @@ if st.sidebar.button("🚀 Run Career Analysis", type="primary"):
         with tab4:
             st.markdown("### 💡 Recruiter Insights")
             st.info("👨‍💼 **Recruiter perspective and recommendations**")
-            pattern = r'(#+\s*6\..*?\n)(.*?)(\n#+\s*7\..*)'
+            pattern = r'(.*\s*6\..*?\n)(.*?)(\n.*\s*7\..*)'
             match = re.search(pattern, result.raw, re.S)
 
             if match:
@@ -280,7 +280,7 @@ if st.sidebar.button("🚀 Run Career Analysis", type="primary"):
             st.markdown("*Recruiter feedback extracted from the complete analysis above.*")
             
         with tab5:
-            pattern = r'(#+\s*7\..*?\n)(.*?)(\n#+\s*8\..*)'
+            pattern = r'(.*\s*7\..*?\n)(.*?)(\n.*\s*8\..*)'
             match = re.search(pattern, result.raw, re.S)
             if match:
                 points_inside_7 = match.group(2).strip()
